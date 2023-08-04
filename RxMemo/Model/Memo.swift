@@ -7,6 +7,7 @@
 
 import Foundation
 import RxDataSources
+import CoreData
 
 struct Memo: Equatable, IdentifiableType {
     var content: String
