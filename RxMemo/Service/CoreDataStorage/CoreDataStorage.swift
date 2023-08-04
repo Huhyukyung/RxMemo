@@ -7,7 +7,6 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
 import CoreData
 
 class CoreDataStorage: MemoStorageType {
@@ -47,18 +46,30 @@ class CoreDataStorage: MemoStorageType {
     
     @discardableResult
     func memoList() -> RxSwift.Observable<[MemoSectionModel]> {
-        <#code#>
+        return mainContext.rx.entities(Memo.self, sortDescriptors: [NSSortDescriptor(key: "insertDate", ascending: false)])
+            .map { results in [MemoSectionModel(model: 0, items: results)] }
     }
     
     @discardableResult
     func update(memo: Memo, content: String) -> RxSwift.Observable<Memo> {
-        <#code#>
+        let updated = Memo(original: memo, updatedContent: content)
+        
+        do {
+            _ = try mainContext.rx.update(updated)
+            return Observable.just(updated)
+        } catch {
+            return Observable.error(error)
+        }
     }
     
     @discardableResult
     func delete(memo: Memo) -> RxSwift.Observable<Memo> {
-        <#code#>
+        do {
+            try mainContext.rx.delete(memo)
+            
+            return Observable.just(memo)
+        } catch {
+            return Observable.error(error)
+        }
     }
-    
-    
 }

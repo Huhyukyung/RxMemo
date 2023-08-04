@@ -80,7 +80,6 @@
 				1208D2609BD98EF925EFE566 /* Pods-RxMemo.debug.xcconfig */,
 				0CF66241D846B2B51661C413 /* Pods-RxMemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,10 +242,6 @@
 			);
 			mainGroup = AB921EC42A7BAE39009037E4;
 			packageReferences = (
-				AB0FA4072A7BB5D00048BE30 /* XCRemoteSwiftPackageReference "RxSwift.git" */,
-				AB0FA4282A7BD2EF0048BE30 /* XCRemoteSwiftPackageReference "NSObject-Rx.git" */,
-				ABB153D52A7CBE2500C05FE3 /* XCRemoteSwiftPackageReference "Action.git" */,
-				ABB153D82A7CDEDF00C05FE3 /* XCRemoteSwiftPackageReference "RxDataSources.git" */,
 			);
 			productRefGroup = AB921ECE2A7BAE39009037E4 /* Products */;
 			projectDirPath = "";
@@ -555,41 +550,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		AB0FA4072A7BB5D00048BE30 /* XCRemoteSwiftPackageReference "RxSwift.git" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		AB0FA4282A7BD2EF0048BE30 /* XCRemoteSwiftPackageReference "NSObject-Rx.git" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/NSObject-Rx.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		ABB153D52A7CBE2500C05FE3 /* XCRemoteSwiftPackageReference "Action.git" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/Action.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		ABB153D82A7CDEDF00C05FE3 /* XCRemoteSwiftPackageReference "RxDataSources.git" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		AB921ED92A7BAE39009037E4 /* RxMemo.xcdatamodeld */ = {
